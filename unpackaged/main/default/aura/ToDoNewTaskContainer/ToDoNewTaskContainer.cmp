@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:registerEvent name="createTask" type="c:ToDoCreateTask"/>  
+  <div class="slds-grid slds-grid_vertical-align-center slds-m-around_medium">
+  	<div class="slds-col">
+    	<div class="slds-form-element">
+  		<label class="slds-form-element__label" for="task-input">Task Name</label>
+  		<div class="slds-form-element__control">
+    		<input id="task-input" class="slds-input" placeholder="Describe your task" type="text" />
+  	 	</div>
+		</div>  
+    </div>  
+    <div class="slds-col slds-m-around_medium slds slds-p-top_large">
+      <button class="slds-button slds-button_neutral" onclick="{!c.handleCreateTask}">New Task</button>
+    </div>
+  </div>
+  
+    
+</aura:component>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCRA_Seminar_Invite__c</fullName>
+    <externalId>false</externalId>
+    <label>RCRA Seminar Invite</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Coolidge RCRA</fullName>
+                <default>false</default>
+                <label>Coolidge RCRA</label>
+            </value>
+            <value>
+                <fullName>Indy RCRA</fullName>
+                <default>false</default>
+                <label>Indy RCRA</label>
+            </value>
+            <value>
+                <fullName>Pittsburgh RCRA</fullName>
+                <default>false</default>
+                <label>Pittsburgh RCRA</label>
+            </value>
+            <value>
+                <fullName>Toledo RCRA</fullName>
+                <default>false</default>
+                <label>Toledo RCRA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

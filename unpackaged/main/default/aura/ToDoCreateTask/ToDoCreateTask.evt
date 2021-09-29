@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="This event creates a task" >
+    <aura:attribute name="taskName" type="String"/>
+</aura:event>

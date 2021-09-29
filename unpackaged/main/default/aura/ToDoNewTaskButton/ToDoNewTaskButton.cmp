@@ -1,0 +1,3 @@
+<aura:component >
+	<button class="slds-button slds-button_neutral">New Task</button>
+</aura:component>

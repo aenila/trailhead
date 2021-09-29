@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="message" type="String" default="Default String"/>
+    <aura:attribute name="label" type="String" default="Default Label"/>
+	<button onclick="{!c.myAction}">
+        <ui:outputText value="{!v.label}"/>
+    </button>
+</aura:component>
