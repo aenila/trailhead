@@ -2,7 +2,7 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>51.0</apiVersion>
     <isExposed>true</isExposed>
-    <target>
+    <targets>
         <targets>lightning__AppPage</target>
-    </target>
+    </targets>
 </LightningComponentBundle>
