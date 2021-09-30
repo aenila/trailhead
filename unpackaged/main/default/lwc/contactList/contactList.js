@@ -10,7 +10,7 @@ export default class ContactList extends LightningElement {
     data = [];
     columns = columns;
 
-    @wire(getContacts);
+    @wire(getContacts)
     wiredContacts({ error, res}){
         if(res){
             this.data = res;
