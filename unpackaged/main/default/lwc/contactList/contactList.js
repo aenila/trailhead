@@ -1,6 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 import getContacts from '@salesforce/apex/ContactController.getContacts';
-import { reduceErrors } from './ldsUtils';
+import { reduceErrors } from 'c/ldsUtils';
 import FNAME from '@salesforce/schema/Contact.FirstName';
 import LNAME from '@salesforce/schema/Contact.LastName';
 import EML from '@salesforce/schema/Contact.Email';
