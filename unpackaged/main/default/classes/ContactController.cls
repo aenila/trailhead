@@ -8,11 +8,11 @@
 public with sharing class ContactController {
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContacts() {
-        throw new throw new AuraHandledException('This is an exception that will get "reduced"');
-        return [
+        throw new AuraHandledException('This is an exception that will get "reduced"');
+        /*return [
             SELECT Id, FirstName, LastName, Email
             FROM Contact
             WITH SECURITY_ENFORCED
-       ];
+       ];*/
     }
 }
