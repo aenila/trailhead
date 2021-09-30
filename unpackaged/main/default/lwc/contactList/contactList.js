@@ -1,4 +1,4 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
 import getContacts from '@salesforce/apex/ContactController.getContacts';
 const columns = [
     { label: 'First Name', fieldName: 'FirstName' },
