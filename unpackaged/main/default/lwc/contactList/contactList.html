@@ -13,4 +13,7 @@
                 columns={columns}>
         </lightning-datatable>
     </div>    
+    <template if:true={errors}>
+        <p>{errors}</p>
+    </template>
 </template>

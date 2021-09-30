@@ -1,5 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 import getContacts from '@salesforce/apex/ContactController.getContacts';
+import { reduceErrors } from 'c/ldsUtils';
 import FNAME from '@salesforce/schema/Contact.FirstName';
 import LNAME from '@salesforce/schema/Contact.LastName';
 import EML from '@salesforce/schema/Contact.Email';
@@ -12,17 +13,14 @@ const columns = [
 ];
 
 export default class ContactList extends LightningElement {
-    data = [];
-    columns = columns;
-
-    @wire(getContacts)
-    wiredContacts({ error, res}){
-        if(res){
-            this.data = res;
-        }else if(error){
-            console.log(JSON.stringify(error));
-        }
-    }
-
     
+    columns = columns;
+    errors;
+    @wire(getContacts)
+    data;
+
+    get errors(){
+        return (this.data.error) ? 
+            reduceErrors(this.data.error) : [];
+    }
 }
