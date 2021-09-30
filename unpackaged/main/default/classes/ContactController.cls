@@ -1,20 +1,17 @@
+/**
+ * @description       : 
+ * @author            : Adam Nila
+ * @group             : 
+ * @last modified on  : 09-30-2021
+ * @last modified by  : Adam Nila
+**/
 public with sharing class ContactController {
-
-    @AuraEnabled
-    public static List<Contact> findAll() {
-        return [SELECT id, name, phone FROM Contact LIMIT 50];
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getContacts() {
+        return [
+            SELECT FirstName, LastName, Email
+            FROM Contact
+            WITH SECURITY_ENFORCED
+       ];
     }
-
-    @AuraEnabled
-    public static List<Contact> findByName(String searchKey) {
-        String name = '%' + searchKey + '%';
-        return [SELECT id, name, phone FROM Contact WHERE name LIKE :name LIMIT 50];
-    }
-
-    @AuraEnabled
-    public static Contact findById(String contactId) {
-        return [SELECT id, name, title, phone, mobilephone, Account.Name
-                    FROM Contact WHERE Id = :contactId];
-    }
-
 }
