@@ -9,7 +9,7 @@ public with sharing class ContactController {
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContacts() {
         return [
-            SELECT FirstName, LastName, Email
+            SELECT Id, FirstName, LastName, Email
             FROM Contact
             WITH SECURITY_ENFORCED
        ];
