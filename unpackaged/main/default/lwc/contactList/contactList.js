@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-
+import getContacts from '@salesforce/apex/ContactController.getContacts';
 const columns = [
     { label: 'First Name', fieldName: 'FirstName' },
     { label: 'Last Name', fieldName: 'LastName'},
@@ -10,8 +10,8 @@ export default class ContactList extends LightningElement {
     data = [];
     columns = columns;
 
-    @wire
-    getContacts({ error, res}){
+    @wire(getContacts);
+    wiredContacts({ error, res}){
         if(res){
             this.data = res;
         }else if(error){
